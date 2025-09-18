@@ -56,3 +56,24 @@ tree.prettyPrint();
 
 console.log("\nIs tree balanced?", tree.isBalanced());
 
+console.log("\n=== Traversal Methods After Rebalancing ===");
+
+console.log("\nLevel order:");
+const levelOrder2 = [];
+tree.levelOrderForEach(node => levelOrder2.push(node.data));
+console.log(levelOrder2.join(', '));
+
+console.log("\nPre order:");
+const preOrder2 = [];
+tree.preOrderForEach(node => preOrder2.push(node.data));
+console.log(preOrder2.join(', '));
+
+console.log("\nPost order:");
+const postOrder2 = [];
+tree.postOrderForEach(node => postOrder2.push(node.data));
+console.log(postOrder2.join(', '));
+
+console.log("\nIn order:");
+const inOrder2 = [];
+tree.inOrderForEach(node => inOrder2.push(node.data));
+console.log(inOrder2.join(', '));
