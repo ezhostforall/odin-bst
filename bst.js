@@ -129,4 +129,17 @@ class Tree {
       }
     }
   }
+
+  inOrderForEach(callback) {
+    if (!callback) throw new Error('Callback function is required');
+    this._inOrderHelper(this.root, callback);
+  }
+
+  _inOrderHelper(node, callback) {
+    if (node !== null) {
+      this._inOrderHelper(node.left, callback);
+      callback(node);
+      this._inOrderHelper(node.right, callback);
+    }
+  }
 }
