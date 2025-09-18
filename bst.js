@@ -43,6 +43,19 @@ class Tree {
     }
   }
 
-  
+  insert(value) {
+    this.root = this._insertHelper(this.root, value);
+  }
+
+  _insertHelper(node, value) {
+    if (node === null) return new Node(value);
+
+    if (value < node.data) {
+      node.left = this._insertHelper(node.left, value);
+    } else {
+      node.right = this._insertHelper(node.right, value);
+    }
+    return node;
+  }
 
 }
