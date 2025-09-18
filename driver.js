@@ -47,4 +47,9 @@ largeNumbers.forEach(num => tree.insert(num));
 console.log("\nAfter inserting numbers > 100:");
 tree.prettyPrint();
 
+console.log("\nIs tree balanced?", tree.isBalanced());
 
+console.log("\n=== Rebalancing the tree ===");
+tree.rebalance();
+console.log("\nAfter rebalancing:");
+tree.prettyPrint();
