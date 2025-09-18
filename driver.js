@@ -40,3 +40,11 @@ console.log("\nIn order:");
 const inOrder = [];
 tree.inOrderForEach(node => inOrder.push(node.data));
 console.log(inOrder.join(', '));
+
+console.log("\n=== Unbalancing the tree ===");
+const largeNumbers = [101, 102, 103, 104, 105, 106, 107];
+largeNumbers.forEach(num => tree.insert(num));
+console.log("\nAfter inserting numbers > 100:");
+tree.prettyPrint();
+
+
