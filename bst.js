@@ -215,5 +215,9 @@ class Tree {
     return Math.max(leftHeight, rightHeight) + 1;
   }
 
-  
+  rebalance() {
+    const values = [];
+    this.inOrderForEach(node => values.push(node.data));
+    this.root = this.buildTree(values);
+  }
 }
