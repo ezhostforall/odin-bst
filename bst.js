@@ -117,7 +117,7 @@ class Tree {
 
     const queue = [this.root];
 
-    whilte (queue.length > 0) {
+    while (queue.length > 0) {
       const currentNode = queue.shift();
       callback(currentNode);
 
