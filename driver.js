@@ -53,3 +53,6 @@ console.log("\n=== Rebalancing the tree ===");
 tree.rebalance();
 console.log("\nAfter rebalancing:");
 tree.prettyPrint();
+
+console.log("\nIs tree balanced?", tree.isBalanced());
+
