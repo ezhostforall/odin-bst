@@ -168,4 +168,17 @@ class Tree {
       callback(node);
     }
   }
+
+  height(value) {
+    const node = this.find(value);
+    if (node === null) return -1;
+    return this._heightHelper(node);
+  }
+
+  _heightHelper(node) {
+    if (node === null) return -1;
+    const leftHeight = this._heightHelper(node.left);
+    const rightHeight = this._heightHelper(node.right);
+    return Math.max(leftHeight, rightHeight) + 1;
+  }
 }
