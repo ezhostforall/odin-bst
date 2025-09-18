@@ -142,4 +142,30 @@ class Tree {
       this._inOrderHelper(node.right, callback);
     }
   }
+
+  preOrderForEach(callback) {
+    if (!callback) throw new Error('Callback function is required');
+    this._preOrderHelper(this.root, callback);
+  }
+
+  _preOrderHelper(node, callback) {
+    if (node !== null) {
+      callback(node);
+      this._preOrderHelper(node.left, callback);
+      this._preOrderHelper(node.right, callback);
+    }
+  }
+
+  postOrderForEach(callback) {
+    if (!callback) throw new Error('Callback function is required');
+    this._postOrderHelper(this.root, callback);
+  }
+
+  _postOrderHelper(node, callback) {
+    if (node !== null) {
+      this._postOrderHelper(node.left, callback);
+      this._postOrderHelper(node.right, callback);
+      callback(node);
+    }
+  }
 }
