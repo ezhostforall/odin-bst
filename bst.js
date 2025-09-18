@@ -96,4 +96,18 @@ class Tree {
     return node;
   }
 
+  find(value) {
+    return this._findHelper(this.root, value);
+  }
+
+  _findHelper(node, value) {
+    if (node === null || node.data === value) return node;
+
+    if (value < node.data) {
+      return this._findHelper(node.left, value);
+    } else {
+      return this._findHelper(node.right, value);
+    }
+  }
+
 }
