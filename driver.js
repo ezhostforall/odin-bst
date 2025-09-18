@@ -9,3 +9,11 @@ function generateRandomArray(size = 15) {
 }
 
 console.log("=== Binary Search Tree Driver Script ===\n");
+
+const randomArray = generateRandomArray();
+console.log("Generated Array:", randomArray);
+
+const tree = new Tree(randomArray);
+console.log("\nConstructed Balanced BST:");
+tree.prettyPrint();
+
