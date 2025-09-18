@@ -181,4 +181,21 @@ class Tree {
     const rightHeight = this._heightHelper(node.right);
     return Math.max(leftHeight, rightHeight) + 1;
   }
+
+  depth(value) {
+    return this._depthHelper(this.root, value, 0);
+  }
+
+  _depthHelper(node, value, depth) {
+    if (node === null) return null;
+    if (node.data === value) return depth;
+
+    if (value < node.data) {
+      return this._depthHelper(node.left, value, depth + 1);
+    } else {
+      return this._depthHelper(node.right, value, depth + 1);
+    }
+  }
+
+  
 }
