@@ -17,3 +17,4 @@ const tree = new Tree(randomArray);
 console.log("\nConstructed Balanced BST:");
 tree.prettyPrint();
 
+console.log("\nIs tree balanced?", tree.isBalanced());
