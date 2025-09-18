@@ -221,3 +221,5 @@ class Tree {
     this.root = this.buildTree(values);
   }
 }
+
+module.exports = { Node, Tree };
